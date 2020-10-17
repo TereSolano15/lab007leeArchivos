@@ -16,8 +16,6 @@ int main() {
         std::cout << person.toString() << std::endl;
     }
 
-
-    //-------------------------------------------------
     ifstream archivo1;
     string texto;
     
