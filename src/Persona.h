@@ -34,7 +34,7 @@ public:
 
     void setName(const string &name);
 
-    string toString();
+    virtual string toString() const;
 
 };
 
