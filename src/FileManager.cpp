@@ -4,6 +4,14 @@
 
 #include "FileManager.h"
 
+void to_json(json &_json, const Persona &_person) {
+    _json = json{
+            {"id",   _person.getId()},
+            {"name", _person.getName()},
+            {"age", _person.getAge()}
+    };
+}
+
 void from_json(const json &_json, Persona &_person) {
     _person.setId(_json.at("id").get<int>());
     _person.setName(_json.at("name").get<std::string>());
