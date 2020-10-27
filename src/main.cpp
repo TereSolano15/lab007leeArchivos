@@ -10,6 +10,15 @@ int main() {
 
     vector<Persona> personListFromJson;
 
+    cout << "\n\nDeserialización del Json" << endl;
+    personListFromJson = FileManager::deserialize(R"([{"age":21,"id":117430751,"name":"Juan"},
+    {"age":44,"id":401256379,"name":"Chayanne"},{"age":72,"id":501369458,"name":"Rihanna"}])");
+
+    for (const Persona& person: personListFromJson) {
+        std::cout << person.toString() << std::endl;
+
+    }
+
     ifstream archivo1;
     string texto;
     

@@ -30,7 +30,7 @@ void Persona::setName(const string &name) {
     Persona::name = name;
 }
 
-string Persona::toString() {
+string Persona::toString() const {
     stringstream s;
 
     s<< "\t id: " <<id<<endl;
